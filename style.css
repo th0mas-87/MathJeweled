@@ -3,4 +3,16 @@ body {
 	background-image: url('http://androidwallpape.rs/content/02-wallpapers/101-newyork/NY-1920x1200.png');
 	background-size: cover;
 	background-attachment: fixed;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+section {
+	width: 60%;
+	margin: 5% auto;
+	background-color: #ecf0f1;
+}
+
+section h1 {
+	color: #2980b9;
+	font-weight: 300;
 }

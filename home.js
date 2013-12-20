@@ -11,6 +11,13 @@ $(document).ready(function() {
 	$('nav').css('-webkit-animation-play-state', 'running');
 	$('nav').css('top', $('span#h2').position().top + $(window).width() / 12 + 'px');
 	$('nav a').css('font-size', $(window).width() / 35 + 'px');
+	$('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
 });
 
 $(window).resize(function() {

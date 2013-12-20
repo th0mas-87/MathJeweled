@@ -24,6 +24,7 @@ section h1 {
 section h2 {
 	color: #7f8c8d;
 	text-align: center;
+	text-transform: lowercase;
 	font-weight: 400;
 	font-family: 'Alegreya Sans SC', sans-serif;
 	margin: 0;

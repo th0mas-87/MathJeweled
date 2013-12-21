@@ -61,6 +61,24 @@
 	}
 }
 
+@keyframes main {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes main {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 
 body {
 	background-image: url('http://androidwallpape.rs/content/02-wallpapers/86-windydunes/1920_Windy%20Dunes.jpg');
@@ -154,4 +172,27 @@ nav a {
 
 nav a:hover {
 	background-color: rgba(50, 50, 50, 0.375);
+}
+
+section#main {
+	width: 60%;
+	padding: 5%;
+	margin: 2.5% auto;
+	background-color: rgba(236, 240, 241, 0.75);
+	animation-name: main;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 1s;
+	animation-play-state: paused;
+	animation-fill-mode: both;
+	-webkit-animation-name: main;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-fill-mode: both;
 }

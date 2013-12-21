@@ -66,7 +66,7 @@ body {
 	background-image: url('http://androidwallpape.rs/content/02-wallpapers/86-windydunes/1920_Windy%20Dunes.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 span#h1 {
@@ -119,10 +119,9 @@ span#h2 {
 
 nav {
 	position: fixed;
-	left: 5%;
-	width: 85%;
+	left: 7.5%;
 	animation-name: nav;
-	animation-duration: 0.5s;
+	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;
 	animation-direction: normal;
@@ -130,7 +129,7 @@ nav {
 	animation-play-state: paused;
 	animation-fill-mode: both;
 	-webkit-animation-name: nav;
-	-webkit-animation-duration: 0.5s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: ease;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-direction: normal;
@@ -142,10 +141,10 @@ nav {
 nav a {
 	display: inline-block;
 	width: 25%;
-	padding: 0.5em 3.6665%;
-	color: rgba(44, 62, 80, 0.5);
-	background-color: rgba(255, 255, 255, 0.125);
-	font-weight: 200;
+	padding: 1em 3.6665%;
+	color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(44, 62, 80, 0.25);
+	font-weight: 300;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
@@ -154,5 +153,5 @@ nav a {
 }
 
 nav a:hover {
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: rgba(44, 62, 80, 0.375);
 }

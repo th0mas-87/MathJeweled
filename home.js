@@ -25,7 +25,7 @@ $(document).ready(function() {
 				window.location = 'learn.html';
 			});
 		});
-	});
+	}, 100);
 });
 
 $(window).resize(function() {

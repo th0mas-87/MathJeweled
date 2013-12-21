@@ -5,7 +5,7 @@
 		left: -100%;
 	}
 	to {
-		opacity: 0.75;
+		opacity: 1;
 		left: 5%;
 	}
 }
@@ -16,7 +16,7 @@
 		left: -100%;
 	}
 	to {
-		opacity: 0.75;
+		opacity: 1;
 		left: 5%;
 	}
 }

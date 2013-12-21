@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$('div#home').css('height', $('div#home').width() + 'px');
 	$('div#home').click(function() {
 		$('div#main').fadeOut('slow', function() {
-			window.location = '/';
+			window.location = '../';
 		});
 	});
 	$('div#main h1').css('font-size', $(window).width() / 7.5 + 'px');

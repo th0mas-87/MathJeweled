@@ -83,7 +83,7 @@
 body {
 	background-image: url('http://androidwallpape.rs/content/02-wallpapers/86-windydunes/1920_Windy%20Dunes.jpg');
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: absolute;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -107,7 +107,7 @@ div#home:hover {
 
 span#h1 {
 	display: block;
-	position: fixed;
+	position: absolute;
 	color: #ecf0f1;
 	font-weight: 300;
 	margin: 0;
@@ -131,7 +131,7 @@ span#h1 {
 
 span#h2 {
 	display: block;
-	position: fixed;
+	position: absolute;
 	color: #ecf0f1;
 	font-weight: 300;
 	margin: 0;
@@ -154,7 +154,7 @@ span#h2 {
 }
 
 nav {
-	position: fixed;
+	position: absolute;
 	left: 7.5%;
 	animation-name: nav;
 	animation-duration: 1s;

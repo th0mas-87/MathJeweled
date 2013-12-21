@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$('div#home').css('height', $('div#home').width() + 'px');
 	$('div#home').click(function() {
 		$('div#main').fadeOut('slow', function() {
-			window.location = '../';
+			window.location = 'index.html';
 		});
 	});
 	$('div#main h1').css('font-size', $(window).width() / 7.5 + 'px');
@@ -14,6 +14,11 @@ $(document).ready(function() {
 	$('div#main').css('-webkit-animation-play-state', 'running');
 	$('nav').css('animation-play-state', 'running');
 	$('nav').css('-webkit-animation-play-state', 'running');
+	$('nav a:nth-child(1)').click(function() {
+		$('div#main').fadeOut('slow', function() {
+			window.location = 'game.html';
+		});
+	});
 });
 
 $(window).resize(function() {

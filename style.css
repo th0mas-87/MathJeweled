@@ -174,13 +174,10 @@ nav a:hover {
 	background-color: rgba(50, 50, 50, 0.375);
 }
 
-section#main {
-	width: 60%;
-	padding: 5%;
-	margin: 2.5% auto;
-	background-color: rgba(236, 240, 241, 0.75);
+div#main {
+	width: 100%;
 	animation-name: main;
-	animation-duration: 1s;
+	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;
 	animation-direction: normal;
@@ -188,11 +185,18 @@ section#main {
 	animation-play-state: paused;
 	animation-fill-mode: both;
 	-webkit-animation-name: main;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-direction: normal;
 	-webkit-animation-delay: 1s;
 	-webkit-animation-play-state: paused;
 	-webkit-animation-fill-mode: both;
+}
+
+div#main h1 {
+	color: #ecf0f1;
+	font-weight: 300;
+	margin: 0;
+	margin-left: 5%;
 }

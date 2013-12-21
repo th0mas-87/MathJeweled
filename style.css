@@ -87,6 +87,24 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+div#home {
+	opacity: 0.75;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 3.75%;
+	background-color: rgba(50, 50, 50, 0.25);
+	background-image: url('home.png');
+	background-size: 60%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+div#home:hover {
+	background-color: rgba(50, 50, 50, 0.5);
+}
+
 span#h1 {
 	display: block;
 	position: fixed;
@@ -166,8 +184,6 @@ nav a {
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-	transition: 0.125s background-color ease;
-	-webkit-transition: 0.125s background-color ease;
 }
 
 nav a:hover {

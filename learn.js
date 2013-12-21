@@ -19,6 +19,11 @@ $(document).ready(function() {
 			window.location = 'game.html';
 		});
 	});
+	$('nav a:nth-child(3)').click(function() {
+		$('div#main').fadeOut('slow', function() {
+			window.location = 'creators.html';
+		});
+	});
 });
 
 $(window).resize(function() {

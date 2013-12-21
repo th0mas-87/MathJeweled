@@ -13,7 +13,7 @@ $(document).ready(function() {
 		$('span#h2').css('-webkit-animation-play-state', 'running');
 		$('nav').css('animation-play-state', 'running');
 		$('nav').css('-webkit-animation-play-state', 'running');
-		$('.fancybox-media').fancybox({
+		$('#hackathon').fancybox({
 			openEffect  : 'fade',
 			closeEffect : 'fade',
 			helpers : {

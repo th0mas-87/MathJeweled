@@ -74,7 +74,7 @@ Board.prototype.getPiece = function(x, y) {
 
 Board.prototype.setPiece = function(x, y, id) {
 	this.pieces[x][y] = id;
-	$(this.output + ' #r' + y + ' #' + x).html(this.idToFancyOperator(id));
+	$(this.output + ' #r' + y + ' .' + x).html(this.idToFancyOperator(id));
 }
 
 /*###############################################################
@@ -85,7 +85,7 @@ Board.prototype.initialize = function() {
 	for (var y = 0; y < this.height; y++) {
 		$(this.output).append('<div id=\"r' + y + '\"></div>');
 		for (var x = 0; x < this.width; x++) {
-			$(this.output + ' #r' + y).append('<div id=\"' + x + '\"></div>');
+			$(this.output + ' #r' + y).append('<div class=\"' + x + '\"></div>');
 		}
 	}
 	Math.seedrandom(this.seed);

@@ -78,6 +78,19 @@ Board.prototype.setPiece = function(x, y, id) {
 }
 
 /*###############################################################
+	Click Handler Function
+###############################################################*/
+
+Board.prototype.clickHandler = function() {
+	if ($(this).hasClass('selected')) {
+		$(this).removeClass('selected');
+	}
+	else {
+		$(this).addClass('selected');
+	}
+}
+
+/*###############################################################
 	Initialize Function
 ###############################################################*/
 
@@ -86,6 +99,7 @@ Board.prototype.initialize = function() {
 		$(this.output).append('<div id=\"r' + y + '\"></div>');
 		for (var x = 0; x < this.width; x++) {
 			$(this.output + ' #r' + y).append('<div class=\"' + x + '\"></div>');
+			$(this.output + ' #r' + y + ' .' + x).click(this.clickHandler);
 		}
 	}
 	Math.seedrandom(this.seed);

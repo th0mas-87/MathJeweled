@@ -20,6 +20,11 @@ $(document).ready(function() {
 				media : {}
 			}
 		});
+		$('nav a:nth-child(1)').click(function() {
+			$('div#container').fadeOut('slow', function() {
+				window.location = 'test.html';
+			});
+		});
 		$('nav a:nth-child(2)').click(function() {
 			$('div#container').fadeOut('slow', function() {
 				window.location = 'learn.html';

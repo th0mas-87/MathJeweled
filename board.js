@@ -72,6 +72,13 @@ Board.prototype.getPiece = function(x, y) {
 	return this.pieces[x][y];
 }
 
+Board.prototype.getCoordinates = function(tile) {
+	var coordinates = new Array(2);
+	coordinates[0] = tile.attr('class');
+	coordinates[1] = tile.parent().attr('id').substr(-1);
+	return coordinates;
+}
+
 Board.prototype.setPiece = function(x, y, id) {
 	this.pieces[x][y] = id;
 	$(this.output + ' #r' + y + ' .' + x).html(this.idToFancyOperator(id));
@@ -82,11 +89,23 @@ Board.prototype.setPiece = function(x, y, id) {
 ###############################################################*/
 
 Board.prototype.clickHandler = function() {
-	if ($(this).hasClass('selected')) {
-		$(this).removeClass('selected');
+	if ($(this).attr('id') == 'selected-1') {
+		$(this).attr('id', '');
 	}
 	else {
-		$(this).addClass('selected');
+		if ($('#selected-1').length > 0) {
+			$(this).attr('id', 'selected-2');
+			var coordinates2 = getBoard().getCoordinates($(this));
+			var coordinates1 = getBoard().getCoordinates($('#selected-1'));
+			var temp = getBoard().getPiece(coordinates2[0], coordinates2[1]);
+			getBoard().setPiece(coordinates2[0], coordinates2[1], getBoard().getPiece(coordinates1[0], coordinates1[1]));
+			getBoard().setPiece(coordinates1[0], coordinates1[1], temp);
+			$('#selected-1').attr('id', '');
+			$('#selected-2').attr('id', '');
+		}
+		else {
+			$(this).attr('id', 'selected-1');
+		}
 	}
 }
 

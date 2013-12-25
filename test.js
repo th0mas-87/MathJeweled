@@ -35,3 +35,7 @@ $(window).resize(function() {
 		}, 250);
 	}, 250);
 });
+
+function getBoard() {
+	return board;
+}

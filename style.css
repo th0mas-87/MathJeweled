@@ -237,7 +237,7 @@ div#board div div {
 	cursor: pointer;
 }
 
-div#board div div:hover, div#board div div.selected {
+div#board div div:hover, div#board div div#selected-1, div#board div div#selected-2 {
 	background-color: #c0392b;
 	color: #ecf0f1;
 }

@@ -93,15 +93,37 @@ Board.prototype.clickHandler = function() {
 		$(this).attr('id', '');
 	}
 	else {
-		if ($('#selected-1').length > 0) {
-			$(this).attr('id', 'selected-2');
+		if ($('#selected-1').length == 1 && $('#selected-2').length == 0) {
 			var coordinates2 = getBoard().getCoordinates($(this));
 			var coordinates1 = getBoard().getCoordinates($('#selected-1'));
-			var temp = getBoard().getPiece(coordinates2[0], coordinates2[1]);
-			getBoard().setPiece(coordinates2[0], coordinates2[1], getBoard().getPiece(coordinates1[0], coordinates1[1]));
-			getBoard().setPiece(coordinates1[0], coordinates1[1], temp);
-			$('#selected-1').attr('id', '');
-			$('#selected-2').attr('id', '');
+			var xChange = coordinates2[0] - coordinates1[0];
+			var yChange = coordinates2[1] - coordinates1[1];
+			if (xChange > -2 && xChange < 2 && yChange > -2 && yChange < 2) {
+				$(this).attr('id', 'selected-2');
+				$('#selected-1').addClass('moving');
+				$(this).addClass('moving');
+				$('#selected-1').css('transition', 'left 0.25s ease, top 0.25s ease');
+				$('#selected-1').css('left', xChange * $('#selected-1').width() + 'px');
+				$('#selected-1').css('top', yChange * $('#selected-1').height() + 'px');
+				$(this).css('transition', 'right 0.25s ease, bottom 0.25s ease');
+				$(this).css('right', xChange * $(this).width() + 'px');
+				$(this).css('bottom', yChange * $(this).height() + 'px');
+				setTimeout(function() {
+					$('#selected-1').css('transition', 'none');
+					$('#selected-1').css('left', '0');
+					$('#selected-1').css('top', '0');
+					$('#selected-2').css('transition', 'none');
+					$('#selected-2').css('right', '0');
+					$('#selected-2').css('bottom', '0');
+					var temp = getBoard().getPiece(coordinates1[0], coordinates1[1]);
+					getBoard().setPiece(coordinates1[0], coordinates1[1], getBoard().getPiece(coordinates2[0], coordinates2[1]));
+					getBoard().setPiece(coordinates2[0], coordinates2[1], temp);
+					$('#selected-1').removeClass('moving');
+					$('#selected-2').removeClass('moving');
+					$('#selected-1').attr('id', '');
+					$('#selected-2').attr('id', '');
+				}, 250);
+			}
 		}
 		else {
 			$(this).attr('id', 'selected-1');

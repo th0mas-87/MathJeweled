@@ -231,6 +231,7 @@ div#board>div {
 
 div#board div div {
 	display: inline-block;
+	position: relative;
 	color: #2c3e50;
 	font-weight: 300;
 	text-align: center;
@@ -240,4 +241,9 @@ div#board div div {
 div#board div div:hover, div#board div div#selected-1, div#board div div#selected-2 {
 	background-color: #c0392b;
 	color: #ecf0f1;
+}
+
+div#board div div.moving, div#board div div.moving:hover, div#board div div#selected-1.moving, div#board div div#selected-2.moving {
+	background-color: rgba(0, 0, 0, 0);
+	color: #2c3e50;
 }

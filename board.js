@@ -95,6 +95,7 @@ function Board(width, height, percentOperators, maxOperator, seed, output) {
 				try {
 					if (eval(row.substr(j, i)) == this.solution) {
 						console.log('Solution found - ' + row.substr(j, i));
+						return;
 					}
 				}
 				catch (error) {
@@ -114,6 +115,7 @@ function Board(width, height, percentOperators, maxOperator, seed, output) {
 				try {
 					if (eval(column.substr(j, i)) == this.solution) {
 						console.log('Solution found - ' + column.substr(j, i));
+						return;
 					}
 				}
 				catch (error) {

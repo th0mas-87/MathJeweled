@@ -111,7 +111,7 @@ div#home:hover {
 span#h1 {
 	display: block;
 	position: absolute;
-	color: #ecf0f1;
+	color: #2c3e50;
 	font-weight: 300;
 	margin: 0;
 	animation-name: header1;
@@ -135,7 +135,7 @@ span#h1 {
 span#h2 {
 	display: block;
 	position: absolute;
-	color: #ecf0f1;
+	color: #2c3e50;
 	font-weight: 300;
 	margin: 0;
 	animation-name: header2;
@@ -214,7 +214,7 @@ div#main {
 }
 
 div#main h1 {
-	color: #ecf0f1;
+	color: #2c3e50;
 	font-weight: 300;
 	margin: 0;
 	margin-left: 5%;

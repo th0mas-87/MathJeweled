@@ -1,5 +1,5 @@
 
-var board = new Board(7, 7, 33, 14, 'bla', 'div#board');
+var board = new Board(10, 5, 33, 14, 'bla', 'div#board');
 
 $(document).ready(function() {
 	board.initialize();
